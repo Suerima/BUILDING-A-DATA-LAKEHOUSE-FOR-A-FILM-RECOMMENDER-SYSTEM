@@ -54,6 +54,13 @@ Với data lineage dày đặc, nên việc tách 2 workflow phục vụ cho t�
   
 **Lược đồ hình sao cho lớp DWH**
 [![Picture5.png](https://i.postimg.cc/vZB5b4sg/Picture5.png)](https://postimg.cc/0bTzC2rP)
+Thông tin các bảng:
+- Bảng dim_info thể hiện cho thông tin bộ phim
+- Bảng dim_company thể hiện đối tượng các công ty sản xuất phim
+- Bảng dim_language thể hiện về ngôn ngữ sử dụng trong bộ phim
+- Bảng dim_genre thể hiện thông tin thể loại
+- Bảng dim_date thể hiện đối tượng thời gian
+- Bảng fact_movie mỗi dòng trong bảng tương ứng thông tin tình trạng cụ thể về một bộ phim.
 
 ### 3. Dashboard
 - Dashboard báo cáo tình trạng các bộ phim trên toàn thế giới 
