@@ -35,18 +35,21 @@ Thông tin các bảng:
 Với data lineage dày đặc, nên việc tách 2 workflow phục vụ cho từng mục đích riêng sẽ dễ trực quan hơn
 
 **Workflow phục vụ cho Machine Learning**
+
 [![ml-workflow.png](https://i.postimg.cc/x1GtNDzL/ml-workflow.png)](https://postimg.cc/2164gtT5)
 - Dữ liệu từ Data Source là MySQL và file csv load vào bronze layer
 - Từ bronze layer, dữ liệu được dedupe, clean và fill missing theo các tiêu chuẩn đã đặt ra ở silver layer
 - Sau đó dữ liệu sẽ được phục vụ cho Machine Learning
 
 **Workflow phục vụ cho Lớp Warehouse**
+
 [![fact-workflow-jpg.png](https://i.postimg.cc/44M8r1GH/fact-workflow-jpg.png)](https://postimg.cc/5jBqzL6f)
 - Dữ liệu từ Data Source là MySQL và file csv load vào bronze layer
 - Từ bronze layer, dữ liệu được dedupe, clean và fill missing ở silver layer
 - Sau đó transformm, tính toán nâng cao và phân tách ở gold layer
   
 **Lược đồ hình sao cho lớp DWH**
+
 [![Picture5.png](https://i.postimg.cc/vZB5b4sg/Picture5.png)](https://postimg.cc/0bTzC2rP)
 
 Thông tin các bảng:
