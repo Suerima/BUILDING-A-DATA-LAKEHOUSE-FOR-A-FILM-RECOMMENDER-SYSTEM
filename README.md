@@ -59,4 +59,4 @@ Thông tin các bảng:
 
 ### 3. Dashboard
 - Dashboard báo cáo tình trạng các bộ phim trên toàn thế giới 
-[![Picture4.png](https://i.postimg.cc/R0Wr7ZQj/Picture4.png)](https://postimg.cc/1g1YPPdH)
+[![Picture4.png](https://i.postimg.cc/NfLPPfzD/Picture4.png)](https://postimg.cc/CzTNRYYn)
