@@ -1,12 +1,5 @@
 # Xây dựng Data LakeHouse cho hệ thống gợi ý phim
 
-- [Rental Sakila Project](#rental-sakila-project)
-  - [1. Giới thiệu đề tài](#1-giới-thiệu-đề-tài)
-  - [2. Thông tin về dataset](#2-thông-tin-về-dataset)
-  - [3.1 Nội dung chính dự án](#31-nội-dung-chính-dự-án)
-    - [3.2. Xây dựng cube và truy vấn bằng công cụ SSAS](#32-xây-dựng-cube-và-truy-vấn-bằng-công-cụ-ssas)
-    - [3.3. Xây dựng Dashboard](#33-xây-dựng-dashboard)
-    - 
 ## 1. Objective
 Mục tiêu của project, là triển khai xây dựng hệ thống Data Lakehouse và ứng dụng từ kiến trúc này lên website gợi ý phim.
  
@@ -55,6 +48,7 @@ Với data lineage dày đặc, nên việc tách 2 workflow phục vụ cho t�
   
 **Lược đồ hình sao cho lớp DWH**
 [![Picture5.png](https://i.postimg.cc/vZB5b4sg/Picture5.png)](https://postimg.cc/0bTzC2rP)
+
 Thông tin các bảng:
 - Bảng dim_info thể hiện cho thông tin bộ phim
 - Bảng dim_company thể hiện đối tượng các công ty sản xuất phim
