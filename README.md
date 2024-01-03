@@ -1,4 +1,4 @@
-# Xây dựng Data LakeHouse cho hế thống gợi ý phim
+# Xây dựng Data LakeHouse cho hệ thống gợi ý phim
 
 - [Rental Sakila Project](#rental-sakila-project)
   - [1. Giới thiệu đề tài](#1-giới-thiệu-đề-tài)
