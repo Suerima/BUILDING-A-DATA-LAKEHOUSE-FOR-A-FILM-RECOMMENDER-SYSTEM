@@ -8,7 +8,7 @@
     - [3.2. Xây dựng cube và truy vấn bằng công cụ SSAS](#32-xây-dựng-cube-và-truy-vấn-bằng-công-cụ-ssas)
     - [3.3. Xây dựng Dashboard](#33-xây-dựng-dashboard)
 ## 1. Objective
-Mục tiêu của project, là triển khai xây dựng hệ thống Data Lakehouse và các ứng dụng từ kiến trúc này để ứng dụng lên website gợi ý phim.
+Mục tiêu của project, là triển khai xây dựng hệ thống Data Lakehouse và ứng dụng từ kiến trúc này lên website gợi ý phim.
  
 ## 2. Design
 ### 2.1 System Architecture
@@ -25,8 +25,28 @@ Tổng thể, kiến trúc này sử dụng các công nghệ được tích h�
 
 ## 2.2 Database schema
 [![Picture3.png](https://i.postimg.cc/VkzXTSJb/Picture3.png)](https://postimg.cc/bsFGSwHz)
+Thông tin các bảng:
+- Bảng movie chứa dữ liệu liên quan đến thông tin về từng bộ phim
+- Bảng genre lưu trữ thông tin về các thể loại của các bộ phim
+- Bảng actor lưu trữ thông tin liên quan đến actor
+- Bảng budget lưu trữ thông tin liên quan đến ngân sách
+- Bảng keyword lưu trữ thông tin về các từ khóa
+- Bảng trailer lưu trữ thông tin về trailer của phim
+- Bảng liên kết quan hệ n-n giữa bộ phim và diễn viên
+- Bảng liên kết quan hệ n-n giữa đạo diễn và bộ phim
+- Bảng liên kết quan hệ n-n giữa bộ phim và từ khóa
+- Bảng liên kết quan hệ n-n giữa bộ phim và thể loại
 
 ## 2.3 Data lineage
+[![ml-workflow.png](https://i.postimg.cc/x1GtNDzL/ml-workflow.png)](https://postimg.cc/2164gtT5)
+
+[![fact-workflow-jpg.png](https://i.postimg.cc/44M8r1GH/fact-workflow-jpg.png)](https://postimg.cc/5jBqzL6f)
+
+Dữ liệu xuất phát từ MySQL và các loại API, load vào bronze layer
+Từ bronze layer, dữ liệu được dedupe, clean và fill missing ở silver layer
+Sau đó tính toán nâng cao và phân tách ở gold layer
+Load vào data warehouse - Postgres ở warehouse layer
+Và cuối cùng, transform theo nhu cầu ở recommendations layer bằng dbt
 
 ### 3. Dashboard
 - Dashboard báo cáo doanh thu 
