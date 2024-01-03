@@ -8,7 +8,7 @@ Mục tiêu của project, là triển khai xây dựng hệ thống Data Lakeh
 [![Picture2.png](https://i.postimg.cc/FF0CcLcM/Picture2.png)](https://postimg.cc/s1DJC1Tm)
 - Data sources: Dữ liệu thô ban đầu gồm 2 nguồn từ file csv sẽ được lưu trữ trong Azure Data Lake Storage, nguồn còn lại được thu thập cào và lưu trữ trong MySQL Database trên Azure Database.
 - Ingestion: Quá trình tải dữ liệu từ nguồn vào lớp Bronze trong Data Lakehouse sử dụng PySpark. 
-- Transformation: Dữ liệu thô từ lớp Bronze được chuyển đổi và tinh chế trong các lớp dữ liệu Silver và Gold. Quá trình này được thực hiện bằng cách sử dụng PySpark (giao diện Python cho Apache Spark), cho phép sử dụng Python để tương tác với Spark và thực hiện các hoạt động xử lý dữ liệu lớn. Chuyển đổi dữ liệu thô thành các bộ dữ liệu được tinh chỉnh và chuẩn mực hơn. 
+- Transformation: Dữ liệu thô từ lớp Bronze được chuyển đổi và tinh chế trong các lớp dữ liệu Silver và Gold được thực hiện bằng PySpark.
 - Data Lakehouse:  Delta Lake được sử dụng làm định dạng bảng lưu trữ dữ liệu. Hive-metastore trong databricks được sử dụng để lưu trữ metadata cho các bảng dữ liệu, Apache Spark được sử dụng làm công cụ tính toán để truy vấn và xử lý dữ liệu.
  - Visualization: PowerBI được sử dụng để trực quan hóa và khám phá dữ liệu.
 - Web recommendation: Xây dựng một trang web gợi ý phim sử dụng API từ mô hình Machine Learning đã triển khai.
