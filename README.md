@@ -4,9 +4,9 @@
   - [1. Giới thiệu đề tài](#1-giới-thiệu-đề-tài)
   - [2. Thông tin về dataset](#2-thông-tin-về-dataset)
   - [3.1 Nội dung chính dự án](#31-nội-dung-chính-dự-án)
-    - [3.1 Xây dựng kho dữ liệu bằng công cụ SSIS](#31-xây-dựng-kho-dữ-liệu-bằng-công-cụ-ssis)
     - [3.2. Xây dựng cube và truy vấn bằng công cụ SSAS](#32-xây-dựng-cube-và-truy-vấn-bằng-công-cụ-ssas)
     - [3.3. Xây dựng Dashboard](#33-xây-dựng-dashboard)
+    - 
 ## 1. Objective
 Mục tiêu của project, là triển khai xây dựng hệ thống Data Lakehouse và ứng dụng từ kiến trúc này lên website gợi ý phim.
  
@@ -38,18 +38,23 @@ Thông tin các bảng:
 - Bảng liên kết quan hệ n-n giữa bộ phim và thể loại
 
 ## 2.3 Data lineage
+Với data lineage dày đặc, nên việc tách 2 workflow phục vụ cho từng mục đích riêng sẽ dễ trực quan hơn
+
+Workflow phục vụ cho Machine Learning
 [![ml-workflow.png](https://i.postimg.cc/x1GtNDzL/ml-workflow.png)](https://postimg.cc/2164gtT5)
+- Dữ liệu từ Data Source là MySQL và file csv load vào bronze layer
+- Từ bronze layer, dữ liệu được dedupe, clean và fill missing theo các tiêu chuẩn đã đặt ra ở silver layer
+- Sau đó dữ liệu sẽ được phục vụ cho Machine Learning
 
+Workflow phục vụ cho Lớp Warehouse
 [![fact-workflow-jpg.png](https://i.postimg.cc/44M8r1GH/fact-workflow-jpg.png)](https://postimg.cc/5jBqzL6f)
-
-Dữ liệu xuất phát từ MySQL và các loại API, load vào bronze layer
-Từ bronze layer, dữ liệu được dedupe, clean và fill missing ở silver layer
-Sau đó tính toán nâng cao và phân tách ở gold layer
-Load vào data warehouse - Postgres ở warehouse layer
-Và cuối cùng, transform theo nhu cầu ở recommendations layer bằng dbt
+- Dữ liệu từ Data Source là MySQL và file csv load vào bronze layer
+- Từ bronze layer, dữ liệu được dedupe, clean và fill missing ở silver layer
+- Sau đó tính toán nâng cao và phân tách ở gold layer
+- Load vào data warehouse - Postgres ở warehouse layer
+- Và cuối cùng, transform theo nhu cầu ở recommendations layer bằng dbt
+[![Picture5.png](https://i.postimg.cc/vZB5b4sg/Picture5.png)](https://postimg.cc/0bTzC2rP)
 
 ### 3. Dashboard
-- Dashboard báo cáo doanh thu 
-[![dashboard-sales-reporting.png](https://i.postimg.cc/DZL56Pv2/dashboard-sales-reporting.png)](https://postimg.cc/mzZQ2M1q)
-- Dashboard thông kê những yếu tố nổi bật theo thời gian 
-![dashboard_sales_reporting](https://i.postimg.cc/W1sRkt7F/dashboard-list-top.png)
+- Dashboard báo cáo tình trạng các bộ phim trên toàn thế giới 
+[![Picture4.png](https://i.postimg.cc/R0Wr7ZQj/Picture4.png)](https://postimg.cc/1g1YPPdH)
