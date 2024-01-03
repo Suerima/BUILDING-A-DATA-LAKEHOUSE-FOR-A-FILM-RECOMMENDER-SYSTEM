@@ -25,6 +25,7 @@ Tổng thể, kiến trúc này sử dụng các công nghệ được tích h�
 
 ## 2.2 Database schema
 [![Picture3.png](https://i.postimg.cc/VkzXTSJb/Picture3.png)](https://postimg.cc/bsFGSwHz)
+
 Thông tin các bảng:
 - Bảng movie chứa dữ liệu liên quan đến thông tin về từng bộ phim
 - Bảng genre lưu trữ thông tin về các thể loại của các bộ phim
